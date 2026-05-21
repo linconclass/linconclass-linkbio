@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Link bio premium do músico Lincon Class com links oficiais, lançamentos, agenda e contato."
+    />
+    <meta property="og:title" content="Lincon Class | Música" />
+    <meta
+      property="og:description"
+      content="Ouça os lançamentos, acompanhe a agenda e fale com Lincon Class."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/lincon-class-cover.svg" />
+    <title>Lincon Class | Link Bio</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#070707",
+              ember: "#ff4d2d",
+              gold: "#d8b15f",
+              smoke: "#f2efe8"
+            },
+            fontFamily: {
+              display: ["Inter", "ui-sans-serif", "system-ui"],
+              body: ["Inter", "ui-sans-serif", "system-ui"]
+            },
+            boxShadow: {
+              glow: "0 24px 80px rgba(255, 77, 45, 0.24)"
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background:
+          radial-gradient(circle at top left, rgba(255, 77, 45, 0.26), transparent 34rem),
+          radial-gradient(circle at bottom right, rgba(216, 177, 95, 0.18), transparent 30rem),
+          #070707;
+      }
+
+      .sound-bar {
+        animation: pulse-bar 1.15s ease-in-out infinite;
+        transform-origin: bottom;
+      }
+
+      .sound-bar:nth-child(2) {
+        animation-delay: 0.12s;
+      }
+
+      .sound-bar:nth-child(3) {
+        animation-delay: 0.24s;
+      }
+
+      .sound-bar:nth-child(4) {
+        animation-delay: 0.36s;
+      }
+
+      @keyframes pulse-bar {
+        0%,
+        100% {
+          transform: scaleY(0.45);
+          opacity: 0.55;
+        }
+
+        50% {
+          transform: scaleY(1);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen font-body text-smoke antialiased">
+    <main class="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-5 py-5 sm:px-8 lg:px-10">
+      <header class="flex items-center justify-between py-3">
+        <a href="#" class="flex items-center gap-3" aria-label="Lincon Class">
+          <span class="grid h-10 w-10 place-items-center rounded-full border border-white/15 bg-white/10">
+            <img src="./assets/favicon.svg" alt="" class="h-6 w-6" />
+          </span>
+          <span class="text-base font-black uppercase tracking-wide">Lincon Class</span>
+        </a>
+
+        <a
+          href="#contato"
+          class="rounded-full border border-white/15 px-4 py-2 text-xs font-bold uppercase tracking-wide text-white/85 transition hover:border-ember hover:text-white"
+        >
+          Booking
+        </a>
+      </header>
+
+      <section class="grid flex-1 items-center gap-8 py-8 lg:grid-cols-[1.05fr_0.95fr] lg:py-10">
+        <div class="max-w-2xl">
+          <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 text-xs font-bold uppercase tracking-wide text-white/75">
+            <span class="h-2 w-2 rounded-full bg-ember"></span>
+            Nova fase em movimento
+          </p>
+          <h1 class="text-5xl font-black leading-[0.95] text-white sm:text-6xl lg:text-7xl">
+            Lincon Class
+          </h1>
+          <p class="mt-5 max-w-xl text-lg leading-8 text-white/72">
+            Música urbana com presença, melodia e assinatura própria. Entre para ouvir, seguir,
+            contratar e acompanhar os próximos lançamentos.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a
+              class="group inline-flex items-center justify-center gap-3 rounded-full bg-ember px-6 py-4 text-sm font-black uppercase tracking-wide text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-[#ff6548]"
+              href="https://open.spotify.com/search/Lincon%20Class"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Ouvir agora
+              <span aria-hidden="true" class="transition group-hover:translate-x-1">→</span>
+            </a>
+            <button
+              id="copy-link"
+              class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-6 py-4 text-sm font-black uppercase tracking-wide text-white transition hover:border-gold hover:bg-white/15"
+              type="button"
+            >
+              Copiar link
+            </button>
+          </div>
+        </div>
+
+        <div class="relative mx-auto w-full max-w-md">
+          <div class="absolute inset-4 rounded-[2rem] bg-ember/20 blur-3xl"></div>
+          <article class="relative overflow-hidden rounded-[1.75rem] border border-white/15 bg-white/[0.08] p-4 shadow-2xl backdrop-blur">
+            <img
+              src="./assets/lincon-class-cover.svg"
+              alt="Arte visual de Lincon Class"
+              class="aspect-[4/5] w-full rounded-[1.2rem] object-cover"
+            />
+            <div class="mt-4 flex items-center justify-between">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wide text-white/50">Em destaque</p>
+                <h2 class="mt-1 text-xl font-black text-white">Single / Show / Collab</h2>
+              </div>
+              <div class="flex h-10 items-end gap-1" aria-hidden="true">
+                <span class="sound-bar h-7 w-1.5 rounded-full bg-ember"></span>
+                <span class="sound-bar h-10 w-1.5 rounded-full bg-gold"></span>
+                <span class="sound-bar h-6 w-1.5 rounded-full bg-white"></span>
+                <span class="sound-bar h-8 w-1.5 rounded-full bg-ember"></span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section aria-label="Links principais" class="grid gap-3 pb-8 md:grid-cols-2">
+        <a class="link-card" href="https://open.spotify.com/search/Lincon%20Class" target="_blank" rel="noreferrer">
+          <span>Spotify</span>
+          <strong>Ouça os lançamentos</strong>
+        </a>
+        <a class="link-card" href="https://www.youtube.com/results?search_query=Lincon+Class" target="_blank" rel="noreferrer">
+          <span>YouTube</span>
+          <strong>Clipes e performances</strong>
+        </a>
+        <a class="link-card" href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+          <span>Instagram</span>
+          <strong>Bastidores e agenda</strong>
+        </a>
+        <a id="contato" class="link-card" href="mailto:booking@linconclass.com">
+          <span>Contato</span>
+          <strong>Shows, collabs e imprensa</strong>
+        </a>
+      </section>
+
+      <footer class="flex flex-col gap-3 border-t border-white/10 py-5 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span id="year"></span> Lincon Class. Todos os direitos reservados.</p>
+        <p>Press kit • Booking • Lançamentos</p>
+      </footer>
+    </main>
+
+    <div
+      id="toast"
+      class="fixed bottom-5 left-1/2 hidden -translate-x-1/2 rounded-full bg-white px-4 py-3 text-sm font-bold text-ink shadow-2xl"
+      role="status"
+    >
+      Link copiado
+    </div>
+
+    <script src="./assets/script.js"></script>
+    <style>
+      .link-card {
+        display: flex;
+        min-height: 6.5rem;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.075);
+        padding: 1.25rem;
+        color: white;
+        transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+      }
+
+      .link-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(216, 177, 95, 0.65);
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .link-card span {
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .link-card strong {
+        font-size: 1.25rem;
+        line-height: 1.15;
+      }
+    </style>
+  </body>
+</html>
