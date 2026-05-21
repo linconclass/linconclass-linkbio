@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Recepção de Convidados",
+    "description": "Boas-vindas marcantes com sax ao vivo e clima refinado desde a chegada.",
+    "image": "./assets/images/service-recepcao.svg"
+  },
+  {
+    "title": "Sax Live com DJ",
+    "description": "Performance vibrante integrando sax, pista e repertorio contemporaneo.",
+    "image": "./assets/images/service-sax-dj.svg"
+  },
+  {
+    "title": "Cerimonial",
+    "description": "Trilhas sensiveis para entradas, momentos solenes e celebracoes especiais.",
+    "image": "./assets/images/service-cerimonial.svg"
+  },
+  {
+    "title": "Casamentos",
+    "description": "Uma assinatura musical elegante para tornar cada momento inesquecivel.",
+    "image": "./assets/images/service-casamentos.svg"
+  },
+  {
+    "title": "Eventos Corporativos",
+    "description": "Presenca musical profissional para marcas, lancamentos e encontros executivos.",
+    "image": "./assets/images/service-corporativo.svg"
+  },
+  {
+    "title": "Aniversários",
+    "description": "Repertorio personalizado para celebrar com energia, classe e emocao.",
+    "image": "./assets/images/service-aniversarios.svg"
+  },
+  {
+    "title": "15 Anos",
+    "description": "Momentos de impacto para entrada, valsa, recepcao e festa.",
+    "image": "./assets/images/service-15anos.svg"
+  },
+  {
+    "title": "Festa Particular",
+    "description": "Uma experiencia musical exclusiva para encontros intimistas ou grandes festas.",
+    "image": "./assets/images/service-particular.svg"
+  }
+]

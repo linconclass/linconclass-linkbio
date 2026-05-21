@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(255, 77, 45, 0.26), transparent 34rem),
+    radial-gradient(circle at bottom right, rgba(216, 177, 95, 0.18), transparent 30rem),
+    #070707;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.link-card {
+  display: flex;
+  min-height: 6.5rem;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.075);
+  padding: 1.25rem;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.link-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(216, 177, 95, 0.65);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.link-card span {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.link-card strong {
+  font-size: 1.25rem;
+  line-height: 1.15;
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 18rem;
+  border-radius: 1.15rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.075);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.2);
+  transform: translateZ(0);
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+}
+
+.service-card::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, transparent 18%, rgba(7, 7, 7, 0.2) 45%, rgba(7, 7, 7, 0.92));
+  pointer-events: none;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(216, 177, 95, 0.7);
+  background: rgba(255, 255, 255, 0.11);
+}
+
+.service-card:hover .service-image {
+  transform: scale(1.04);
+}
+
+.service-image {
+  height: 100%;
+  min-height: 18rem;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.service-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding: 1.15rem;
+}
+
+.service-content h3 {
+  font-size: 1.12rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: white;
+}
+
+.service-content p {
+  margin-top: 0.55rem;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.55;
+}
+
+#contact-modal.is-open {
+  display: flex;
+  opacity: 1;
+}
+
+.field-label {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.field-label span {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.field-label input,
+.field-label select,
+.field-label textarea {
+  width: 100%;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  background: rgba(7, 7, 7, 0.42);
+  color: white;
+  outline: none;
+  padding: 0.95rem 1rem;
+  transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.field-label select option {
+  color: #070707;
+}
+
+.field-label input:focus,
+.field-label select:focus,
+.field-label textarea:focus {
+  border-color: rgba(216, 177, 95, 0.75);
+  background: rgba(7, 7, 7, 0.58);
+  box-shadow: 0 0 0 4px rgba(216, 177, 95, 0.12);
+}
+
+.whatsapp-button {
+  margin-top: 0.35rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #1f9d55, #25d366);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 950;
+  letter-spacing: 0.05em;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 20px 60px rgba(37, 211, 102, 0.22);
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.whatsapp-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}

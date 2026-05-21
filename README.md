@@ -4,14 +4,22 @@ Landing page premium/link bio para o músico Lincon Class, criada com HTML, Tail
 
 ## Estrutura
 
-- `index.html`
-- `assets/script.js`
-- `assets/favicon.svg`
-- `assets/lincon-class-cover.svg`
+- `index.html`: shell principal com SEO e pontos de montagem dos componentes
+- `components/`: secoes HTML reutilizaveis
+- `css/`: estilos globais, animacoes e regras responsivas
+- `js/`: inicializacao, modal e formulario de WhatsApp
+- `data/services.json`: dados dos cards de servicos
+- `assets/images/`: imagens e icones
 
 ## Como executar
 
-Abra `index.html` no navegador ou publique a pasta em qualquer serviço de hospedagem estática.
+Sirva a pasta com um servidor estatico para permitir o carregamento dos componentes via `fetch`.
+
+```bash
+npx vercel dev
+```
+
+ou publique a pasta em qualquer serviço de hospedagem estática.
 
 ## Personalizacao
 
