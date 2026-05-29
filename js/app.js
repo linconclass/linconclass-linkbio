@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initRevealAnimations();
   initContactModal();
   initWhatsappForm();
-  initServiceCardClicks(); // Ativa a interação nos cards de serviços
+  initServiceCardClicks(); // Ativa a interação inteligente nos cards
 });
 
 async function loadComponents() {
@@ -62,7 +62,6 @@ async function renderServices() {
 }
 
 function createServiceCard(service) {
-  // Adicionado o atributo 'data-service-name' para sincronizar com o modal de contato ao clicar
   return `
     <article class="service-card cursor-pointer" data-service-name="${service.title}">
       <img src="${service.image}" data-fallback-image="${service.fallbackImage || ""}" alt="" class="service-image" loading="lazy" width="640" height="440" />
@@ -91,7 +90,7 @@ function initServiceImageFallbacks() {
 }
 
 function initServiceCardClicks() {
-  // Faz com que ao clicar em qualquer card de serviço, abra o modal de contato com o serviço já selecionado
+  // Corrigido para abrir o modal de forma direta e transparente
   document.querySelectorAll(".service-card[data-service-name]").forEach((card) => {
     card.addEventListener("click", () => {
       const serviceName = card.dataset.serviceName;
@@ -102,12 +101,10 @@ function initServiceCardClicks() {
         selectComponent.value = serviceName;
       }
 
-      if (modal && typeof modal.dispatchEvent === "function") {
-        // Dispara o evento personalizado para o modal de contato abrir (gerenciado pelo js/modal.js)
-        const openButton = document.querySelector("[data-open-contact]");
-        if (openButton) {
-          openButton.click();
-        }
+      // Dispara o clique simulado no botão de booking (que agora é Orçamento) para o script modal.js abrir a tela
+      const openButton = document.querySelector("[data-open-contact]");
+      if (openButton) {
+        openButton.click();
       }
     });
   });
@@ -155,7 +152,8 @@ function showToast(message) {
 }
 
 function initRevealAnimations() {
-  const revealItems = document.querySelectorAll("header, main > div, .link-card, .service-card, footer");
+  // Otimização Máxima: Removemos o 'header' e o 'footer' da lista de animação para garantir que fiquem visíveis na hora
+  const revealItems = document.querySelectorAll("main > div, .link-card, .service-card");
 
   if (!revealItems.length) {
     return;
@@ -163,7 +161,8 @@ function initRevealAnimations() {
 
   revealItems.forEach((item, index) => {
     item.classList.add("reveal-item");
-    item.style.transitionDelay = `${Math.min(index * 55, 360)}ms`;
+    // Transição fluida e ultra-rápida (20ms) eliminando atrasos no carregamento
+    item.style.transitionDelay = `${Math.min(index * 20, 120)}ms`;
   });
 
   if (!("IntersectionObserver" in globalThis)) {
@@ -182,7 +181,8 @@ function initRevealAnimations() {
         observer.unobserve(entry.target);
       });
     },
-    { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+    // Configuração responsiva extrema: os elementos são montados em tela antes mesmo de aparecerem por completo
+    { threshold: 0.01, rootMargin: "0px 0px 100px 0px" }
   );
 
   revealItems.forEach((item) => observer.observe(item));
