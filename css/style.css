@@ -1,44 +1,145 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap");
 
+/* Base */
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  position: relative;
+  overflow-x: hidden;
+  /* Aplica o fundo escuro principal com a aura centralizada sutil no topo */
   background:
-    radial-gradient(circle at top left, rgba(255, 77, 45, 0.26), transparent 34rem),
-    radial-gradient(circle at bottom right, rgba(216, 177, 95, 0.18), transparent 30rem),
-    #070707;
+    radial-gradient(circle at 50% -20%, rgba(245, 158, 11, 0.12), transparent 45rem),
+    var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Remove as camadas poluídas de gradientes aleatórios do antigo body::before */
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  pointer-events: none;
+  background: transparent;
+  opacity: 1;
 }
 
 body.modal-open {
   overflow: hidden;
 }
 
+main {
+  position: relative;
+  z-index: 1;
+}
+
+h1,
+h2,
+.service-content h3 {
+  font-family: "Playfair Display", Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+h1 {
+  color: var(--text-primary);
+  text-shadow: 0 16px 48px rgba(7, 10, 18, 0.28);
+}
+
+main section:first-of-type .max-w-2xl > p:last-of-type {
+  color: var(--text-secondary) !important;
+}
+
+main section:first-of-type .inline-flex:first-child {
+  border-color: var(--border-soft);
+  background: var(--bg-field);
+  color: var(--text-secondary);
+  backdrop-filter: var(--blur-card);
+}
+
+header {
+  position: relative;
+  z-index: 2;
+}
+
+header button[data-open-contact],
+a[href*="open.spotify.com"],
+#copy-link {
+  box-shadow: 0 16px 46px rgba(0, 0, 0, 0.16);
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    background var(--transition),
+    box-shadow var(--transition),
+    filter var(--transition);
+}
+
+header button[data-open-contact]:hover,
+a[href*="open.spotify.com"]:hover,
+#copy-link:hover {
+  transform: translateY(-2px);
+}
+
+/* Customização Estética do Botão Ouvir Agora - Amarelo Fixo por Padrão */
+a[href*="open.spotify.com"] {
+  background: var(--gold-primary) !important;
+  color: var(--text-ink) !important;
+  box-shadow: var(--shadow-amber) !important;
+}
+
+/* Hover do Botão Ouvir Agora - Muda para o Cinza Escuro Elevado com Texto Branco */
+a[href*="open.spotify.com"]:hover {
+  background: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+#copy-link,
+header button[data-open-contact] {
+  background: var(--bg-field);
+  backdrop-filter: var(--blur-card);
+  border: 1px solid var(--border-soft);
+}
+
+main section:first-of-type article {
+  border-color: var(--border-soft);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-cinematic);
+}
+
+/* Glass Cards */
 .link-card {
   display: flex;
   min-height: 6.5rem;
   width: 100%;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.075);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-primary);
+  background: var(--bg-card);
   padding: 1.25rem;
-  color: white;
+  color: var(--text-primary);
   cursor: pointer;
   text-decoration: none;
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+  backdrop-filter: var(--blur-card);
+  box-shadow: 0 18px 58px rgba(7, 10, 18, 0.18);
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    background var(--transition),
+    box-shadow var(--transition);
 }
 
 .link-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(216, 177, 95, 0.65);
-  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-4px);
+  border-color: var(--border-gold);
+  background: var(--bg-card-strong);
+  box-shadow: var(--shadow-cinematic), var(--shadow-amber);
 }
 
 .link-card span {
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--text-muted);
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -50,34 +151,60 @@ body.modal-open {
   line-height: 1.15;
 }
 
+/* Services */
 .service-card {
   position: relative;
   overflow: hidden;
   min-height: 18rem;
-  border-radius: 1.15rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.075);
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-primary);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-primary);
   transform: translateZ(0);
-  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+  backdrop-filter: var(--blur-card);
+  transition:
+    transform 220ms var(--easing-premium),
+    border-color 220ms var(--easing-premium),
+    background 220ms var(--easing-premium),
+    box-shadow 220ms var(--easing-premium);
 }
 
+/* Degradê interno dos cards suavizado para a paleta escura */
 .service-card::after {
   position: absolute;
   inset: 0;
   content: "";
-  background: linear-gradient(180deg, transparent 18%, rgba(7, 7, 7, 0.2) 45%, rgba(7, 7, 7, 0.92));
+  background:
+    linear-gradient(180deg, rgba(11, 16, 28, 0.02) 8%, rgba(11, 16, 28, 0.3) 50%, rgba(11, 16, 28, 0.85)),
+    radial-gradient(circle at 20% 20%, rgba(245, 158, 11, 0.06), transparent 18rem);
   pointer-events: none;
 }
 
+.service-card::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  border: 1px solid var(--border-soft);
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+
 .service-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(216, 177, 95, 0.7);
-  background: rgba(255, 255, 255, 0.11);
+  transform: translateY(-6px);
+  border-color: var(--border-gold);
+  background: var(--bg-card-strong);
+  box-shadow: var(--shadow-cinematic), var(--shadow-amber);
+}
+
+.service-card:hover::before {
+  opacity: 1;
 }
 
 .service-card:hover .service-image {
-  transform: scale(1.04);
+  transform: scale(1.055);
 }
 
 .service-image {
@@ -85,14 +212,14 @@ body.modal-open {
   min-height: 18rem;
   width: 100%;
   object-fit: cover;
-  transition: transform 500ms ease;
+  transition: transform var(--transition-slow);
 }
 
 .service-content {
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   padding: 1.15rem;
 }
 
@@ -100,27 +227,36 @@ body.modal-open {
   font-size: 1.12rem;
   font-weight: 900;
   line-height: 1.1;
-  color: white;
+  color: var(--text-primary);
+  text-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
 }
 
 .service-content p {
   margin-top: 0.55rem;
-  color: rgba(255, 255, 255, 0.62);
+  color: var(--text-muted);
   line-height: 1.55;
 }
 
+/* Modal */
 #contact-modal.is-open {
   display: flex;
   opacity: 1;
 }
 
+.modal-panel {
+  background: var(--bg-depth) !important;
+  backdrop-filter: var(--blur-modal);
+  box-shadow: var(--shadow-cinematic), 0 0 0 1px rgba(245, 158, 11, 0.08);
+}
+
+/* Form */
 .field-label {
   display: grid;
   gap: 0.5rem;
 }
 
 .field-label span {
-  color: rgba(255, 255, 255, 0.62);
+  color: var(--text-secondary);
   font-size: 0.75rem;
   font-weight: 900;
   letter-spacing: 0.08em;
@@ -131,41 +267,99 @@ body.modal-open {
 .field-label select,
 .field-label textarea {
   width: 100%;
-  border-radius: 0.9rem;
-  border: 1px solid rgba(255, 255, 255, 0.13);
-  background: rgba(7, 7, 7, 0.42);
-  color: white;
+  border-radius: var(--radius-field);
+  border: 1px solid var(--border-field);
+  background: var(--bg-field);
+  color: var(--text-primary);
   outline: none;
   padding: 0.95rem 1rem;
-  transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+  backdrop-filter: blur(14px);
+  transition:
+    border-color var(--transition),
+    background var(--transition),
+    box-shadow var(--transition);
+}
+
+.field-label input::placeholder,
+.field-label textarea::placeholder {
+  color: var(--text-soft);
 }
 
 .field-label select option {
-  color: #070707;
+  color: var(--text-ink);
 }
 
 .field-label input:focus,
 .field-label select:focus,
 .field-label textarea:focus {
-  border-color: rgba(216, 177, 95, 0.75);
-  background: rgba(7, 7, 7, 0.58);
-  box-shadow: 0 0 0 4px rgba(216, 177, 95, 0.12);
+  border-color: var(--border-gold);
+  background: var(--bg-field-focus);
+  box-shadow: var(--shadow-focus);
 }
 
+/* Buttons */
 .whatsapp-button {
   margin-top: 0.35rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, #1f9d55, #25d366);
-  color: white;
+  background: linear-gradient(135deg, var(--whatsapp-start), var(--whatsapp-end));
+  color: var(--text-primary);
   font-size: 0.85rem;
   font-weight: 950;
   letter-spacing: 0.05em;
   padding: 1rem 1.2rem;
-  box-shadow: 0 20px 60px rgba(37, 211, 102, 0.22);
-  transition: transform 180ms ease, filter 180ms ease;
+  box-shadow: var(--shadow-whatsapp);
+  transition:
+    transform var(--transition),
+    filter var(--transition),
+    box-shadow var(--transition);
 }
 
 .whatsapp-button:hover {
   transform: translateY(-2px);
   filter: brightness(1.08);
+  box-shadow: 0 24px 72px rgba(37, 211, 102, 0.28);
+}
+
+/* Reveal */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 700ms var(--easing-premium),
+    transform 700ms var(--easing-premium);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  body {
+    background:
+      radial-gradient(circle at 50% -10%, rgba(245, 158, 11, 0.14), transparent 25rem),
+      var(--bg-primary);
+  }
+
+  .service-card,
+  .service-image {
+    min-height: 17rem;
+  }
+
+  .link-card {
+    min-height: 6rem;
+  }
+
+  .modal-panel {
+    border-radius: 1.15rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .service-card,
+  .service-image {
+    min-height: 17rem;
+  }
 }

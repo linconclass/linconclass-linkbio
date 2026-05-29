@@ -1,4 +1,4 @@
-const whatsappNumber = "5521969909037";
+const whatsappNumber = "5521969909037"; // Seu número configurado perfeitamente
 
 export function initWhatsappForm() {
   const contactForm = document.querySelector("#contact-form");
@@ -11,7 +11,8 @@ export function initWhatsappForm() {
     event.preventDefault();
     const message = buildWhatsappMessage(new FormData(contactForm));
 
-    window.open(
+    // Ajustado para usar globalThis alinhado com as boas práticas do seu ecossistema
+    globalThis.open(
       `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
       "_blank",
       "noopener,noreferrer"
@@ -22,36 +23,23 @@ export function initWhatsappForm() {
 function buildWhatsappMessage(formData) {
   const getValue = (name) => String(formData.get(name) || "").trim();
 
-  return `🎷 NOVO ATENDIMENTO - SITE LINCON CLASS
+  // Texto otimizado em blocos compactos para leitura imediata na sua tela do WhatsApp
+  return `🎷 *NOVO ORÇAMENTO - LINCON CLASS*
 
-👤 Nome:
-${getValue("nome")}
+👤 *Nome:* ${getValue("nome")}
+📞 *Telefone:* ${getValue("telefone")}
+🎼 *Evento:* ${getValue("evento")}
+🏢 *Local:* ${getValue("estabelecimento")}
+📍 *Endereço:* ${getValue("endereco")}
+📅 *Data:* ${formatDate(getValue("data"))}
+🌆 *Cidade:* ${getValue("cidade")}
+👥 *Convidados:* ${getValue("quantidade")}
 
-📞 Telefone:
-${getValue("telefone")}
-
-🎼 Tipo de Evento:
-${getValue("evento")}
-
-🏢 Local:
-${getValue("estabelecimento")}
-
-📍 Endereço:
-${getValue("endereco")}
-
-📅 Data:
-${formatDate(getValue("data"))}
-
-🌆 Cidade:
-${getValue("cidade")}
-
-👥 Convidados:
-${getValue("quantidade")}
-
-📝 Detalhes:
+📝 *Detalhes:* 
 ${getValue("detalhes")}
 
-Olá! Vim pelo site e gostaria de solicitar um orçamento.`;
+---
+_Olá! Vim pelo site e gostaria de verificar sua disponibilidade._`;
 }
 
 function formatDate(value) {

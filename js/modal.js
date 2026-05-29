@@ -35,7 +35,8 @@ function closeContactModal(contactModal) {
   contactModal.classList.remove("is-open");
   document.body.classList.remove("modal-open");
 
-  window.setTimeout(() => {
+  // Ajustado para globalThis para manter o padrão semântico do seu projeto
+  globalThis.setTimeout(() => {
     contactModal.classList.add("hidden");
   }, 280);
 }

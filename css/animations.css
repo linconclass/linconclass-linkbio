@@ -1,6 +1,9 @@
+/* Sound Bars */
 .sound-bar {
-  animation: pulse-bar 1.15s ease-in-out infinite;
+  /* Animação do equalizador de áudio premium com tom âmbar */
+  animation: pulse-bar 1.42s var(--easing-premium) infinite;
   transform-origin: bottom;
+  background-color: var(--gold-primary); 
 }
 
 .sound-bar:nth-child(2) {
@@ -15,20 +18,42 @@
   animation-delay: 0.36s;
 }
 
+/* Modal Entry Animation */
 #contact-modal.is-open .modal-panel {
-  animation: modal-in 260ms ease both;
+  animation: modal-in 260ms var(--easing-premium) both;
 }
 
+/* Micro Interactions Performance */
+.link-card,
+.service-card,
+.whatsapp-button,
+a[href*="open.spotify.com"],
+#copy-link,
+header button[data-open-contact] {
+  will-change: transform;
+}
+
+/* Keyframes */
 @keyframes pulse-bar {
   0%,
   100% {
-    transform: scaleY(0.45);
-    opacity: 0.55;
+    transform: scaleY(0.38) translateY(1px);
+    opacity: 0.48;
   }
 
-  50% {
-    transform: scaleY(1);
+  34% {
+    transform: scaleY(0.78) translateY(-1px);
+    opacity: 0.78;
+  }
+
+  58% {
+    transform: scaleY(1.05) translateY(0);
     opacity: 1;
+  }
+
+  78% {
+    transform: scaleY(0.72) translateY(1px);
+    opacity: 0.72;
   }
 }
 

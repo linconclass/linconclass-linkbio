@@ -2,41 +2,49 @@
   {
     "title": "Recepção de Convidados",
     "description": "Boas-vindas marcantes com sax ao vivo e clima refinado desde a chegada.",
-    "image": "./assets/images/service-recepcao.svg"
+    "image": "./assets/images/recepcao-convidados.jpg",
+    "fallbackImage": "./assets/images/recepcao-convidados.jpg"
   },
   {
     "title": "Sax Live com DJ",
     "description": "Performance vibrante integrando sax, pista e repertorio contemporaneo.",
-    "image": "./assets/images/service-sax-dj.svg"
+    "image": "./assets/images/sax-live-dj.jpg",
+    "fallbackImage": "./assets/images/sax-live-dj.jpg"
   },
   {
     "title": "Cerimonial",
     "description": "Trilhas sensiveis para entradas, momentos solenes e celebracoes especiais.",
-    "image": "./assets/images/service-cerimonial.svg"
+    "image": "./assets/images/cerimonial.jpg",
+    "fallbackImage": "./assets/images/cerimonial.jpg"
   },
   {
     "title": "Casamentos",
     "description": "Uma assinatura musical elegante para tornar cada momento inesquecivel.",
-    "image": "./assets/images/service-casamentos.svg"
+    "image": "./assets/images/casamentos.jpg",
+    "fallbackImage": "./assets/images/casamentos.jpg"
   },
   {
     "title": "Eventos Corporativos",
     "description": "Presenca musical profissional para marcas, lancamentos e encontros executivos.",
-    "image": "./assets/images/service-corporativo.svg"
+    "image": "./assets/images/eventos-corporativos.jpg",
+    "fallbackImage": "./assets/images/eventos-corporativos.jpg"
   },
   {
     "title": "Aniversários",
     "description": "Repertorio personalizado para celebrar com energia, classe e emocao.",
-    "image": "./assets/images/service-aniversarios.svg"
+    "image": "./assets/images/aniversarios.jpg",
+    "fallbackImage": "./assets/images/aniversarios.jpg"
   },
   {
     "title": "15 Anos",
     "description": "Momentos de impacto para entrada, valsa, recepcao e festa.",
-    "image": "./assets/images/service-15anos.svg"
+    "image": "./assets/images/15-anos.jpg",
+    "fallbackImage": "./assets/images/15-anos.jpg"
   },
   {
     "title": "Festa Particular",
     "description": "Uma experiencia musical exclusiva para encontros intimistas ou grandes festas.",
-    "image": "./assets/images/service-particular.svg"
+    "image": "./assets/images/festa-particular.jpg",
+    "fallbackImage": "./assets/images/festa-particular.jpg"
   }
 ]

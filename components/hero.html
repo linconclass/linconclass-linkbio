@@ -1,30 +1,32 @@
 <section class="grid flex-1 items-center gap-8 py-8 lg:grid-cols-[1.05fr_0.95fr] lg:py-10">
   <div class="max-w-2xl">
-    <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 text-xs font-bold uppercase tracking-wide text-white/75">
-      <span class="h-2 w-2 rounded-full bg-ember"></span>
+    <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-[var(--bg-surface)] px-3 py-2 text-xs font-bold uppercase tracking-wide text-[var(--text-secondary)]">
+      <span class="h-2 w-2 rounded-full bg-[var(--gold-primary)] animate-pulse"></span>
       Nova fase em movimento
     </p>
-    <h1 class="text-5xl font-black leading-[0.95] text-white sm:text-6xl lg:text-7xl">
+    <h1 class="text-5xl font-black leading-[0.95] text-[var(--text-primary)] sm:text-6xl lg:text-7xl">
       Lincon Class
     </h1>
-    <p class="mt-5 max-w-xl text-lg leading-8 text-white/72">
+    <p class="mt-5 max-w-xl text-lg leading-8 text-[var(--text-secondary)]">
       Música urbana com presença, melodia e assinatura própria. Entre para ouvir, seguir,
       contratar e acompanhar os próximos lançamentos.
     </p>
 
     <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+      <!-- Botão Ouvir Agora Customizado (Amarelo Clean / Hover Slate) -->
       <a
-        class="group inline-flex items-center justify-center gap-3 rounded-full bg-ember px-6 py-4 text-sm font-black uppercase tracking-wide text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-[#ff6548]"
+        class="group inline-flex items-center justify-center gap-3 rounded-full bg-[var(--gold-primary)] px-6 py-4 text-sm font-black uppercase tracking-wide text-[var(--text-ink)] shadow-lg shadow-amber-500/10 transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--bg-elevated)] hover:text-[var(--text-primary)]"
         href="https://open.spotify.com/intl-pt/album/7vVShgkaFJV44LP3EcPcJe"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
       >
         Ouvir agora
         <span aria-hidden="true" class="transition group-hover:translate-x-1">→</span>
       </a>
+
       <button
         id="copy-link"
-        class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-6 py-4 text-sm font-black uppercase tracking-wide text-white transition hover:border-gold hover:bg-white/15"
+        class="inline-flex items-center justify-center rounded-full border border-white/10 bg-[var(--bg-surface)] px-6 py-4 text-sm font-black uppercase tracking-wide text-[var(--text-primary)] transition hover:border-[var(--gold-primary)] hover:bg-[var(--bg-card-strong)]"
         type="button"
       >
         Copiar link
@@ -33,26 +35,27 @@
   </div>
 
   <div class="relative mx-auto w-full max-w-md">
-    <div class="absolute inset-4 rounded-[2rem] bg-ember/20 blur-3xl"></div>
-    <article class="relative overflow-hidden rounded-[1.75rem] border border-white/15 bg-white/[0.08] p-4 shadow-2xl backdrop-blur">
+    <!-- Aura de iluminação traseira sutil -->
+    <div class="absolute inset-4 rounded-[2rem] bg-[var(--gold-primary)]/10 blur-3xl"></div>
+    <article class="relative overflow-hidden rounded-[1.75rem] border border-[var(--border-primary)] bg-[var(--bg-card)] p-4 shadow-2xl backdrop-blur">
       <img
-        src="./assets/images/lincon-class-cover.svg"
+        src="./assets/images/lincon-class-cover.jpg"
         alt="Arte visual de Lincon Class"
         class="aspect-[4/5] w-full rounded-[1.2rem] object-cover"
         width="900"
         height="1125"
-        fetchpriority="high"
       />
       <div class="mt-4 flex items-center justify-between">
         <div>
-          <p class="text-xs font-bold uppercase tracking-wide text-white/50">Em destaque</p>
-          <h2 class="mt-1 text-xl font-black text-white">Single / Show / Collab</h2>
+          <p class="text-xs font-bold uppercase tracking-wide text-[var(--text-soft)]">Em destaque</p>
+          <h2 class="mt-1 text-xl font-black text-[var(--text-primary)]">Single / Show / Collab</h2>
         </div>
+        <!-- Equalizadores de Áudio Integrados ao CSS de Sound Bars -->
         <div class="flex h-10 items-end gap-1" aria-hidden="true">
-          <span class="sound-bar h-7 w-1.5 rounded-full bg-ember"></span>
-          <span class="sound-bar h-10 w-1.5 rounded-full bg-gold"></span>
-          <span class="sound-bar h-6 w-1.5 rounded-full bg-white"></span>
-          <span class="sound-bar h-8 w-1.5 rounded-full bg-ember"></span>
+          <span class="sound-bar h-7 w-1.5 rounded-full"></span>
+          <span class="sound-bar h-10 w-1.5 rounded-full"></span>
+          <span class="sound-bar h-6 w-1.5 rounded-full"></span>
+          <span class="sound-bar h-8 w-1.5 rounded-full"></span>
         </div>
       </div>
     </article>

@@ -7,8 +7,11 @@
       name="description"
       content="Música ao vivo para casamentos, eventos corporativos, aniversários, sax live com DJ, recepção de convidados e eventos sofisticados."
     />
-    <meta name="theme-color" content="#070707" />
+    <!-- Corrigido o atributo de cor do tema do navegador -->
+    <meta name="theme-color" content="#0b0f17" />
     <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph (Redes Sociais / WhatsApp / Instagram) -->
     <meta property="og:title" content="Lincon Class | Música para Eventos" />
     <meta
       property="og:description"
@@ -17,26 +20,34 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://linconclass-linkbio.vercel.app" />
     <meta property="og:site_name" content="Lincon Class" />
-    <meta property="og:image" content="https://linconclass-linkbio.vercel.app/assets/images/lincon-class-cover.svg" />
+    <meta property="og:image" content="https://vercel.app" />
+    
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Lincon Class | Música para Eventos" />
     <meta
       name="twitter:description"
       content="Música ao vivo para casamentos, eventos corporativos, aniversários, sax live com DJ, recepção de convidados e eventos sofisticados."
     />
-    <meta name="twitter:image" content="https://linconclass-linkbio.vercel.app/assets/images/lincon-class-cover.svg" />
+    <meta name="twitter:image" content="https://vercel.app" />
+    
     <title>Lincon Class | Música para Eventos</title>
     <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://cdn.tailwindcss.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Scripts e Folhas de Estilo -->
     <script src="./js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/animations.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
   </head>
-  <body class="min-h-screen font-body text-smoke antialiased">
+  <body class="min-h-screen font-body antialiased">
+    
+    <!-- Estrutura Principal dos Slots de Componentes Dinâmicos -->
     <main class="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-5 py-5 sm:px-8 lg:px-10">
       <div data-component="header"></div>
       <div data-component="hero"></div>
@@ -44,16 +55,19 @@
       <div data-component="footer"></div>
     </main>
 
-    <div
+    <!-- Balão de Aviso (Toast) Otimizado para o Tema Escuro Glassmorphism -->
+    <div 
       id="toast"
-      class="fixed bottom-5 left-1/2 hidden -translate-x-1/2 rounded-full bg-white px-4 py-3 text-sm font-bold text-ink shadow-2xl"
+      class="fixed bottom-5 left-1/2 hidden -translate-x-1/2 rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-bold text-white shadow-2xl backdrop-blur-xl transition duration-300"
       role="status"
     >
       Link copiado
     </div>
 
+    <!-- Slot do Modal do Formulário -->
     <div data-component="contact-modal"></div>
 
+    <!-- Script Principal modular -->
     <script type="module" src="./js/app.js"></script>
   </body>
 </html>
