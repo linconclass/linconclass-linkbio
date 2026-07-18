@@ -1,0 +1,83 @@
+Listagem de caminhos de pasta para o volume Dev_Projetos
+O número de série do volume é 0000006D 7C38:BAA3
+G:.
+¦   .gitignore
+¦   .hintrc
+¦   build.txt
+¦   estrutura.txt
+¦   index.html
+¦   README.md
+¦   
++---.vscode
+¦       launch.json
+¦       
++---assets
+¦   +---images
+¦       ¦   15-anos.jpg
+¦       ¦   aniversarios.jpg
+¦       ¦   casamentos.jpg
+¦       ¦   cerimonial.jpg
+¦       ¦   eventos-corporativos.jpg
+¦       ¦   favicon.svg
+¦       ¦   festa-particular.jpg
+¦       ¦   lincon-class-cover.jpg
+¦       ¦   recepcao-convidados.jpg
+¦       ¦   sax-live-dj.jpg
+¦       ¦   
+¦       +---events
+¦       ¦       .gitkeep
+¦       ¦       
+¦       +---img-2
+¦               011A2967.JPG
+¦               IMG-20240613-WA0008.jpg
+¦               IMG-20240613-WA0009.jpg
+¦               IMG-20240613-WA0010.jpg
+¦               IMG-20240613-WA0013.jpg
+¦               IMG-20240613-WA0014.jpg
+¦               IMG-20240613-WA0015.jpg
+¦               IMG-20240613-WA0016.jpg
+¦               lincon-class-cover.svg
+¦               service-15anos.svg
+¦               service-aniversarios.svg
+¦               service-casamentos.svg
+¦               service-cerimonial.svg
+¦               service-corporativo.svg
+¦               service-particular.svg
+¦               service-recepcao.svg
+¦               service-sax-dj.svg
+¦               WhatsApp Image 2026-04-20 at 08.16.37 (2).jpeg
+¦               WhatsApp Image 2026-04-20 at 08.16.37 (3).jpeg
+¦               WhatsApp Image 2026-04-20 at 08.16.37.jpeg
+¦               WhatsApp Image 2026-04-20 at 08.16.38 (1).jpeg
+¦               WhatsApp Image 2026-04-20 at 08.16.38 (2).jpeg
+¦               WhatsApp Image 2026-04-20 at 08.16.38.jpeg
+¦               WhatsApp Image 2026-04-26 at 23.08.16 (1).jpeg
+¦               WhatsApp Image 2026-04-26 at 23.08.17 (3).jpeg
+¦               
++---components
+¦       contact-modal.html
+¦       footer.html
+¦       header.html
+¦       hero.html
+¦       services.html
+¦       
++---css
+¦       animations.css
+¦       responsive.css
+¦       style.css
+¦       variables.css
+¦       
++---data
+¦       services.json
+¦       
++---js
+¦       app.js
+¦       modal.js
+¦       tailwind-config.js
+¦       whatsapp-form.js
+¦       
++---portfolio
+        index.html
+        portfolio.css
+        portfolio.js
+        
